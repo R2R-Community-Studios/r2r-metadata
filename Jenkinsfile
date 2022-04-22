@@ -4,7 +4,7 @@ pipeline {
     AWS_ACCOUNT_ID="898214808722"
     AWS_DEFAULT_REGION="us-east-1" 
 	CLUSTER_NAME="default"
-	SERVICE_NAME="r2r-medata-service"
+	SERVICE_NAME="r2r-metadata"
 	TASK_DEFINITION_NAME="first-run-task-definition"
 	DESIRED_COUNT="1"
     IMAGE_REPO_NAME="r2r-metadata"
