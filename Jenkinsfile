@@ -24,6 +24,14 @@ pipeline {
         }
       }
     }
+
+    stage(' Tests') {
+      steps{
+        script {
+          sh 'ls'
+        }
+      }
+    }
         
     // Building Docker images
     stage('Building image') {
