@@ -1,16 +1,15 @@
 pipeline {
     agent any
     environment {
-        AWS_ACCOUNT_ID="898214808722"
-        AWS_DEFAULT_REGION="us-east-1" 
+    AWS_ACCOUNT_ID="898214808722"
+    AWS_DEFAULT_REGION="us-east-1" 
 	CLUSTER_NAME="default"
 	SERVICE_NAME="r2r-medata-service"
-	TASK_DEFINITION_NAME="
-    first-run-task-definition"
+	TASK_DEFINITION_NAME="first-run-task-definition"
 	DESIRED_COUNT="1"
-        IMAGE_REPO_NAME="r2r-metadata"
-        IMAGE_TAG="${env.BUILD_ID}"
-        REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
+    IMAGE_REPO_NAME="r2r-metadata"
+    IMAGE_TAG="${env.BUILD_ID}"
+    REPOSITORY_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/${IMAGE_REPO_NAME}"
 	registryCredential = "admin-user"
     }
    
